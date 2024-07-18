@@ -39,7 +39,11 @@ yarn start
 ```
 The app will be available at 
 ```bash
-http://localhost:3000 or https://taskmanager.tanishk.me
+http://localhost:3000
+```
+or
+```bash
+https://taskmanager.tanishk.me
 ```
 API Integration
 The frontend interacts with the backend API hosted at render
