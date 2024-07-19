@@ -30,7 +30,7 @@ const App = () => {
       <h1>Task Management App</h1>
       
       {loading ? (
-        <p>Loading, The api is hosted over a free tier , you may face 1 min of lodaing time after a period of inactivity</p>
+        <p>Loading, The api is hosted over a free tier , you may face 1 min of loading time after a period of inactivity</p>
       ) : error ? (
         <p>{error}</p>
       ) : (
