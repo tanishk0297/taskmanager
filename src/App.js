@@ -31,6 +31,7 @@ const App = () => {
       
       {loading ? (
         <p>Loading...</p>
+        <p>As the api is hosted over a fre tier , you may face 1 min to lodaing time after a period of inactivity</p>
       ) : error ? (
         <p>{error}</p>
       ) : (
