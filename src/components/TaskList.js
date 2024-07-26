@@ -58,9 +58,18 @@ const TaskList = () => {
     return tasks.sort((a, b) => statusPriority[a.status] - statusPriority[b.status]);
   };
 
+  // Function to handle logout
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.href = "/login";
+  };
+
   return (
     <div className="task-list-container">
       <h2 className="welcome-message">Welcome, {username}!</h2>
+      <button className="btn btn-secondary" onClick={handleLogout}>
+        Logout
+      </button>
       <TaskForm addTask={addTask} />
       <h2 className="task-list-title">Task List</h2>
       <div className="task-items">

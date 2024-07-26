@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const LoginPage = () => {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -27,7 +28,7 @@ const LoginPage = () => {
     <div className="container">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-      <div className="form-group">
+        <div className="form-group">
           <label>Username</label>
           <input
             type="text"
@@ -49,6 +50,9 @@ const LoginPage = () => {
           Login
         </button>
         {error && <p style={{ color: "red" }}>{error}</p>}
+        <button className="btn btn-secondary" onClick={() => window.location.href = "/signup"}>
+          Don't have an account? Signup
+        </button>
       </form>
     </div>
   );

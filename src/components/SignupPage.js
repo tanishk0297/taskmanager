@@ -11,12 +11,11 @@ const SignupPage = () => {
     try {
       const response = await axios.post("https://taskmanagerapi-jxf0.onrender.com/api/signup", {
         username,
-        
         password,
       });
       console.log(response.data);
       // Redirect to login page
-    //   window.location.href = "/login";
+      window.location.href = "/login";
     } catch (err) {
       setError(err.response.data.message);
     }
@@ -49,6 +48,9 @@ const SignupPage = () => {
           Signup
         </button>
         {error && <p style={{ color: "red" }}>{error}</p>}
+        <button className="btn btn-secondary" onClick={() => window.location.href = "/login"}>
+          Already have an account? Login
+        </button>
       </form>
     </div>
   );
